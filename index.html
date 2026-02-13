@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Amor Eterno</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particles-background"></div>
+    <div id="tulip-garden"></div>
+
+    <section id="scene-0" class="scene active intro-passion">
+        <div class="main-heart-container" onclick="igniteLove()">
+            <div class="pulsating-heart">❤️</div>
+            <p class="click-hint">Haz click en mi corazón</p>
+        </div>
+        <div class="initial-hearts"></div>
+    </section>
+
+    <section id="scene-1" class="scene">
+        <div class="glass-container">
+            <h1 class="main-title">Eres el amor de mi vida</h1>
+            <p class="love-letter">Tu amor es el jardín donde siempre quiero caminar. Hoy, diseñemos un recuerdo juntos...</p>
+            <button class="btn-romantic" onclick="nextScene('scene-2')">Comenzar nuestro viaje</button>
+        </div>
+    </section>
+
+    <section id="scene-2" class="scene">
+        <div class="glass-container">
+            <h2 class="script-font">¿Quién eres en mi historia?</h2>
+            <div class="choice-grid">
+                <div class="card-item" onclick="selectChar('Mi Luna', '🌙')">
+                    <div class="icon">🌙</div>
+                    <span>Mi Luna</span>
+                </div>
+                <div class="card-item" onclick="selectChar('Mi Sol', '☀️')">
+                    <div class="icon">☀️</div>
+                    <span>Mi Sol</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scene-3" class="scene">
+        <div class="glass-container">
+            <h2 class="script-font">Elige nuestro destino...</h2>
+            <div class="options-vertical">
+                <button class="opt-btn" onclick="selectOption(1)">✨ Una cena bajo las estrellas</button>
+                <button class="opt-btn" onclick="selectOption(2)">☕ Un café frente a la chimenea</button>
+                <button class="opt-btn" onclick="selectOption(3)">🌊 Un amanecer frente al mar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="scene-4" class="scene">
+        <div class="glass-container final-card">
+            <h1 id="res-title" class="script-font-large"></h1>
+            <p id="res-text" class="final-text"></p>
+            <div id="res-emoji" class="floating-emoji"></div>
+            <button class="btn-romantic" onclick="restart()">Nuestro amor no tiene fin (Reiniciar)</button>
+        </div>
+    </section>
+
+    <audio id="loveSong" loop src="https://www.chosic.com/wp-content/uploads/2021/04/And-So-It-Begins-Inspired-By-Crush-Music.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
